@@ -1,7 +1,22 @@
 package startapps;
 
-/**
- * Created by Katika on 27/02/2017.
- */
+import org.apache.camel.CamelContext;
+import org.apache.camel.impl.DefaultCamelContext;
+import routes.Route3;
+
+
 public class StartApp3 {
+
+    public static void main(String ... args) throws Exception{
+
+        //CREATE CAMELCONTEXT
+        CamelContext context = new DefaultCamelContext();
+
+        //ADD ROUTES TO CONTEXT
+        context.addRoutes(new Route3());
+
+        context.start();
+        Thread.sleep(10000);
+        context.stop();
+    }
 }
