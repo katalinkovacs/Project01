@@ -1,6 +1,7 @@
 package processors;
 
 import employees1.Employeeversion1;
+import employees2.Employeeversion2;
 import org.apache.camel.Exchange;
 
 
@@ -14,20 +15,27 @@ public class Processor3 {
 
         Employeeversion1 e1 = (Employeeversion1) ex.getIn().getBody();
 
+        //create output xml structure top level
+        Employeeversion2 employeeversion2 = new Employeeversion2();
 
-        /*
-        for(Account a : customer1.myAccounts){
-            System.out.println(a.getClass());
-            System.out.println(a.getAccountNumber());
-            System.out.println(a.getBalance());
+        // second level
+        Employeeversion2.Employees employees = new Employeeversion2.Employees();
+        employeeversion2.setEmployees(employees);
+
+        // looping through the input list with list item type  here the list item type is Employeeversion1.Employees.Employee
+        // and the list is from the input body
+        for(Employeeversion1.Employees.Employee employeeIn : e1.getEmployees().getEmployee()){
+
+            Employeeversion2.Employees.Employee employeeOut = new Employeeversion2.Employees.Employee();
+
+            employeeOut.setFamilyname(employeeIn.getLastname());
+            employeeOut.setGivenname(employeeIn.getFirstname());
+            employees.getEmployee().add(employeeOut);
         }
-        */
 
-        for(Employeeversion1.Employees.Employee e : e1.getEmployees().getEmployee()){
-            System.out.println(e.getFirstname());
-            System.out.println(e.getLastname());
-        }
 
+        ex.getIn().setBody(employeeversion2);
+        System.out.print("hello");
 
 
     }
