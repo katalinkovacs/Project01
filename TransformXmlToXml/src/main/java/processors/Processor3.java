@@ -1,7 +1,6 @@
 package processors;
 
 import employees1.Employeeversion1;
-import employees2.Employeeversion2;
 import org.apache.camel.Exchange;
 
 
@@ -24,10 +23,9 @@ public class Processor3 {
         }
         */
 
-        for(Employeeversion1.Employees.Employee e1 : Employeeversion1.Employees.Employee.g){
-            System.out.println(e1.getClass());
-            //System.out.println(e1.getAccountNumber());
-
+        for(Employeeversion1.Employees.Employee e : e1.getEmployees().getEmployee()){
+            System.out.println(e.getFirstname());
+            System.out.println(e.getLastname());
         }
 
 

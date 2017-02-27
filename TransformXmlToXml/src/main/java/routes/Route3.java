@@ -15,10 +15,10 @@ public class Route3 extends RouteBuilder{
 
         JaxbDataFormat jaxbDataFormat2 = new JaxbDataFormat("employees2");
 
-        from("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/From3")
+        from("file:TransformXmlToXml/src/main/resources/data/input?noop=true")
                 .unmarshal(jaxbDataFormat1)
                 .bean(processor3Object, "processor3Method")
                 .marshal(jaxbDataFormat2)
-                .to("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/To3");
+                .to("file:data/output/output.xml");
     }
 }
