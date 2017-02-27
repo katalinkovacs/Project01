@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1488157459009
+Build-Jdk: 1.8.0_45
+Built-By: Katika
+Bundle-ManifestVersion: 2
+Bundle-Name: transform-xml-to-xml
+Bundle-SymbolicName: transform-xml-to-xml
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: processors;uses:="org.apache.camel,employeeversion2,empl
+ oyeeversion1";version="1.0.0.SNAPSHOT",routes;uses:="org.apache.camel.b
+ uilder,org.apache.camel.spi,org.apache.camel.converter.jaxb,processors,
+ org.apache.camel.model";version="1.0.0.SNAPSHOT",startapps;uses:="route
+ s,org.apache.camel,org.apache.camel.impl";version="1.0.0.SNAPSHOT"
+Import-Package: employeeversion1;version="[1.0,2)",employeeversion2;vers
+ ion="[1.0,2)",org.apache.camel;version="[2.15,3)",org.apache.camel.buil
+ der;version="[2.15,3)",org.apache.camel.converter.jaxb;version="[2.15,3
+ )",org.apache.camel.impl;version="[2.15,3)",org.apache.camel.model;vers
+ ion="[2.15,3)",org.apache.camel.spi;version="[2.15,3)",org.osgi.service
+ .blueprint;version="[1.0.0,2.0.0)"
+Tool: Bnd-1.50.0
