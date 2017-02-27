@@ -34,7 +34,8 @@
                     <clearOutputDir>true</clearOutputDir>
                     <outputDirectory>src/main/java</outputDirectory>
                     <sources>
-                        <source>src/main/resources/schemas/employeeVersion2.xsd</source>
+                        <source>src/main/resources/schemas/employeeVersion2_withoneemployee.xsd</source>
+                       <!--  <source>src/main/resources/schemas/employeeVersion2.xsd</source>  -->
                     </sources>
                     <packageName>employeeversion2</packageName>
                 </configuration>
