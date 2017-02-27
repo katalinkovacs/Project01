@@ -11,6 +11,8 @@
         <module>EmployeeVersion1</module>
         <module>EmployeeVersion2</module>
         <module>TransformXmlToXml</module>
+        <module>Employees_1</module>
+        <module>Employees_2</module>
     </modules>
     <packaging>pom</packaging>
 
