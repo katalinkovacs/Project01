@@ -15,6 +15,7 @@
         <module>Employees_2</module>
         <module>Employees1_Phones</module>
         <module>Employees2_Phones</module>
+        <module>test</module>
     </modules>
     <packaging>pom</packaging>
 
