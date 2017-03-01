@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employeeversion2>
+    <staff>
+        <staffmember>
+            <givenname>Katalin</givenname>
+            <familyname>Kovacs</familyname>
+        </staffmember>
+        <staffmember>
+            <givenname>Krisztina</givenname>
+            <familyname>Kallay</familyname>
+        </staffmember>
+    </staff>
+</employeeversion2>
