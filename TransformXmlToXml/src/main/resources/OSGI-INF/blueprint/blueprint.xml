@@ -17,7 +17,7 @@
     </bean>   -->
 
 
-    <!-- Transform emplyee1 to employee2  -->
+    <!-- Transform employee1 to employee2  -->
 
     <bean id="transformationxmltoxml" class="routes.Route1"> </bean>
 
@@ -28,7 +28,7 @@
 
     <!-- Transform emplyee2 to employee1  -->
 
-    <! -- <bean id="transformationxmltoxml2" class="routes.Route2"> </bean>  -->
+    <!-- <bean id="transformationxmltoxml2" class="routes.Route2"> </bean>  -->
 
 <!--
     <camelContext xmlns="http://camel.apache.org/schema/blueprint" id="project01-transformation-xml-to-xml-2">
