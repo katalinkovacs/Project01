@@ -21,13 +21,6 @@ public class Processor4 {
         employeeversion2.setStaff(staff);
 
 
-        // third level??????????????????
-        Employeeversion2.Staff.Staffmember staffmember = new Employeeversion2.Staff.Staffmember();
-        //set????????????//
-
-
-
-
         // looping through the input list with list item type  here the list item type is Employeeversion1.Employees.Employee
         // and the list is from the input body
         for(Employeeversion1.Employees.Employee employeeIn : e1.getEmployees().getEmployee()){
@@ -36,6 +29,12 @@ public class Processor4 {
 
             employeeOut.setFamilyname(employeeIn.getLastname());
             employeeOut.setGivenname(employeeIn.getFirstname());
+
+            Employeeversion2.Staff.Staffmember.Phonenumbers phoneNumbers = new Employeeversion2.Staff.Staffmember.Phonenumbers();
+            phoneNumbers.setCellphone(employeeIn.getPhones().getMobile());
+            phoneNumbers.setLandline(employeeIn.getPhones().getHome());
+            employeeOut.setPhonenumbers(phoneNumbers);
+
             staff.getStaffmember().add(employeeOut);
 
 
