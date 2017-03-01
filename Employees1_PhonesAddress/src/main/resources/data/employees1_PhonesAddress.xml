@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employeeversion1>
+    <employees>
+
+        <employee>
+            <lastname>Kovacs</lastname>
+            <firstname>Katalin</firstname>
+            <phones>
+                <mobile>04761234</mobile>
+                <home>12345</home>
+            </phones>
+            <address>
+                <street>Nicholson</street>
+                <suburb>Altona Meadows</suburb>
+            </address>
+        </employee>
+
+        <employee>
+            <lastname>Kallay</lastname>
+            <firstname>Krisztina</firstname>
+            <phones>
+                <mobile>04765678</mobile>
+                <home>678910</home>
+            </phones>
+            <address>
+                <street>Kalevala</street>
+                <suburb>Nyiregyhaza</suburb>
+            </address>
+        </employee>
+
+    </employees>
+</employeeversion1>

@@ -11,10 +11,12 @@
         <module>EmployeeVersion1</module>
         <module>EmployeeVersion2</module>
         <module>TransformXmlToXml</module>
-        <module>Employees_1</module>
-        <module>Employees_2</module>
+        <module>Employees1</module>
+        <module>Employees2</module>
         <module>Employees1_Phones</module>
         <module>Employees2_Phones</module>
+        <module>Employees1_PhonesAddress</module>
+        <module>Employees2_PhonesAddress</module>
     </modules>
     <packaging>pom</packaging>
 

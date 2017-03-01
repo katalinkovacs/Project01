@@ -11,12 +11,12 @@ public class Route4 extends RouteBuilder{
 
     public void configure() throws Exception {
 
-        JaxbDataFormat jaxbDataFormat1 = new JaxbDataFormat("employees1_phone");
+        JaxbDataFormat jaxbDataFormat1 = new JaxbDataFormat("employees1withphones");
 
-        JaxbDataFormat jaxbDataFormat2 = new JaxbDataFormat("employees2_phone");
+        JaxbDataFormat jaxbDataFormat2 = new JaxbDataFormat("employees2withphones");
 
         //from("file:TransformXmlToXml/src/main/resources/data/input")
-        from("file:TransformXmlToXml/src/main/resources/data/inbox5?noop=true")
+        from("file:TransformXmlToXml/src/main/resources/data/inbox4?noop=true")
                 .unmarshal(jaxbDataFormat1)
                 .bean(processor4Object, "processor4Method")
                 .marshal(jaxbDataFormat2)
