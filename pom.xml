@@ -52,7 +52,7 @@
                 <version>2.15.1</version>
             <!--<version>${camel-version}</version>  -->
 
-        </dependency>
+            </dependency>
 
         <!--ADD JMS jms component-->
             <dependency>
