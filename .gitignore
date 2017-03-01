@@ -2,10 +2,3 @@
 *
 .iml
 
-**/target/*
-
-target/
-
-**/target
-
-**/*/target/*
