@@ -13,6 +13,8 @@
         <module>TransformXmlToXml</module>
         <module>Employees_1</module>
         <module>Employees_2</module>
+        <module>Employees1_Phones</module>
+        <module>Employees2_Phones</module>
     </modules>
     <packaging>pom</packaging>
 
