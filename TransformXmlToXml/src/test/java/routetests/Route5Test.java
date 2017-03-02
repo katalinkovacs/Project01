@@ -76,6 +76,7 @@ public class Route5Test extends CamelTestSupport {
        String result = ex.getIn().getBody(String.class);
 
         // the following is just a third party xml tool to help compare 2 xml files
+        //https://technicalmumbojumbo.wordpress.com/2010/01/31/xml-comparison-tutorial-using-xmlunit/
         Diff diff = new Diff(expected, result);
 
         List<Difference> differences = new DetailedDiff(diff).getAllDifferences();
