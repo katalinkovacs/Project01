@@ -20,10 +20,14 @@ import static org.hamcrest.CoreMatchers.is;
 /**
  * Created by Zoli on 2/03/2017.
  */
+
+//CamelTestSupport will give extra camel specific functionality like createCamelContext
 public class Route5Test extends CamelTestSupport {
 
 
     protected CamelContext createCamelContext() throws Exception {
+        //invoking super class to create the context and
+        // we add route5 to it just like StartApp main
         CamelContext context = super.createCamelContext();
         context.addRoutes(new Route5());
 
@@ -33,19 +37,23 @@ public class Route5Test extends CamelTestSupport {
 
 
 
-
+    //Set up before running test
     @Override
     public void setUp() throws Exception{
         super.setUp();
-
-
-
+        // need the definition of the route to add test magic
         RouteDefinition route5Definition = context.getRouteDefinition("route5");
+
 
         route5Definition.adviceWith(context, new AdviceWithRouteBuilder() {
             @Override
             public void configure() throws Exception {
+                // test magic: replacing "from" with direct:in so we can directly send
+                // message to it
                 replaceFromWith("direct:in");
+                // intercepting the message before it is sent to "to" endopoint
+                // then we skip that endpoint and direct it to a mock endpoint
+                // which we will use in test later to get the final message
                 interceptSendToEndpoint("file:TransformXmlToXml/src/main/resources/data/outbox")
                 .skipSendToOriginalEndpoint().to("mock:out");
             }
@@ -54,15 +62,20 @@ public class Route5Test extends CamelTestSupport {
 
     @Test
     public void route5_whenValidInput_thenValidOutput() throws Exception{
+        // reading in xml request and expected with some
         String request = FileUtils.readFileToString(ResourceUtils.getFile("classpath:input/request.xml"));
         String expected = FileUtils.readFileToString(ResourceUtils.getFile("classpath:expected/successResult.xml"));
 
+        // using template which is given by CamelTestSupport
+        // template is like a client which sends a request to the given endpoint
         template.sendBody("direct:in", request);
 
+        // here we get the exchange from mock endpoint which we used to replace the original one
         Exchange ex = getMockEndpoint("mock:out").getExchanges().get(0);
+        // get the message body as string which is our xml output
        String result = ex.getIn().getBody(String.class);
 
-
+        // the following is just a third party xml tool to help compare 2 xml files
         Diff diff = new Diff(expected, result);
 
         List<Difference> differences = new DetailedDiff(diff).getAllDifferences();
@@ -74,7 +87,7 @@ public class Route5Test extends CamelTestSupport {
             System.out.println("***********************");
         }
 
-
+        // we asserting that the differences are 0
         assertThat(differences.size(), is(0));
 
 
