@@ -1,8 +1,8 @@
 package routetests;
 
-import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.AdviceWithRouteBuilder;
+import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.RouteDefinition;
 import org.apache.camel.test.junit4.CamelTestSupport;
 import org.apache.commons.io.FileUtils;
@@ -25,18 +25,12 @@ import static org.hamcrest.CoreMatchers.is;
 public class Route5Test extends CamelTestSupport {
 
 
-    protected CamelContext createCamelContext() throws Exception {
-        //invoking super class to create the context and
-        // we add route5 to it just like StartApp main
-        CamelContext context = super.createCamelContext();
-        context.addRoutes(new Route5());
-
-        return context;
+    @Override
+    protected RouteBuilder createRouteBuilder(){
+        return new Route5();
     }
 
-
-
-
+    
     //Set up before running test
     @Override
     public void setUp() throws Exception{
