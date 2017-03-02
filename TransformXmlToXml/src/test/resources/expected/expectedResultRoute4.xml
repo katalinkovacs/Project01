@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employeeversion2>
+    <staff>
+        <staffmember>
+            <givenname>Katalin</givenname>
+            <familyname>Kovacs</familyname>
+            <phonenumbers>
+                <cellphone>4761234</cellphone>
+                <landline>12345</landline>
+            </phonenumbers>
+        </staffmember>
+        <staffmember>
+            <givenname>Krisztina</givenname>
+            <familyname>Kallay</familyname>
+            <phonenumbers>
+                <cellphone>4765678</cellphone>
+                <landline>678910</landline>
+            </phonenumbers>
+        </staffmember>
+    </staff>
+</employeeversion2>

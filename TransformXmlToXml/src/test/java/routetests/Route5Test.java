@@ -17,9 +17,7 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 
-/**
- * Created by Zoli on 2/03/2017.
- */
+
 
 //CamelTestSupport will give extra camel specific functionality like createCamelContext
 public class Route5Test extends CamelTestSupport {
