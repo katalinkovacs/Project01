@@ -17,6 +17,7 @@ public class Route4 extends RouteBuilder{
 
         //from("file:TransformXmlToXml/src/main/resources/data/input")
         from("file:TransformXmlToXml/src/main/resources/data/inbox4?noop=true")
+                .id("route4")
                 .unmarshal(jaxbDataFormat1)
                 .bean(processor4Object, "processor4Method")
                 .marshal(jaxbDataFormat2)
