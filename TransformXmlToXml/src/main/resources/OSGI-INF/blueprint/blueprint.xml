@@ -19,22 +19,13 @@
 
     <!-- Transform employee1 to employee2  -->
 
-    <bean id="transformationxmltoxml" class="routes.Route1"> </bean>
+    <bean id="route5bean" class="routes.Route5"> </bean>
 
     <camelContext xmlns="http://camel.apache.org/schema/blueprint" id="project01-transformation-xml-to-xml">
-          <routeBuilder ref="transformationxmltoxml" id="project01-transformation-xml-to-xm" />
+          <routeBuilder ref="route5bean" id="route5" />
     </camelContext>
 
 
-    <!-- Transform emplyee2 to employee1  -->
-
-    <!-- <bean id="transformationxmltoxml2" class="routes.Route2"> </bean>  -->
-
-<!--
-    <camelContext xmlns="http://camel.apache.org/schema/blueprint" id="project01-transformation-xml-to-xml-2">
-          <routeBuilder ref="transformationxmltoxml2" id="project01-transformation-xml-to-xml-2" />
-    </camelContext>
--->
 
 
 </blueprint>

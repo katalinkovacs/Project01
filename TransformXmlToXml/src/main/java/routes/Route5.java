@@ -17,6 +17,7 @@ public class Route5 extends RouteBuilder{
 
         //from("file:TransformXmlToXml/src/main/resources/data/input")
         from("file:TransformXmlToXml/src/main/resources/data/inbox5?noop=true")
+                .id("route5")
                 .unmarshal(jaxbDataFormat1)
                 .bean(processor5Object, "processor5Method")
                 .marshal(jaxbDataFormat2)
