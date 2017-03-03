@@ -26,8 +26,8 @@ public class Route2 extends RouteBuilder{
 
         // FROM FILE TO FILE
 
-        //from("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/From2")
-        from("file:TransformXmlToXml/src/main/resources/data/inbox2")
+        from("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/From2")
+        //from("file:TransformXmlToXml/src/main/resources/data/inbox2")
                 .id("route2")
                 //unmarshalling is the process to read in xml and convert to java object using jaxb generated template
                 // classes
