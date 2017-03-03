@@ -17,3 +17,6 @@ EmployeeVersion2/src/main/java/employeeversion2/ObjectFactory.java
 Employees1_Phones/src/main/java/META-INF/sun-jaxb.episode
 Employees1_Phones/src/main/java/employees1withphones/Employeeversion1.java
 Employees1_Phones/src/main/java/employees1withphones/ObjectFactory.java
+Employees1/src/main/java/META-INF/sun-jaxb.episode
+Employees1/src/main/java/employees1/Employeeversion1.java
+Employees1/src/main/java/employees1/ObjectFactory.java
