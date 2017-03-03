@@ -15,8 +15,9 @@ public class Route5 extends RouteBuilder{
 
         JaxbDataFormat jaxbDataFormat2 = new JaxbDataFormat("employees2phonesaddress");
 
-        //from("file:TransformXmlToXml/src/main/resources/data/input")
-        from("file:TransformXmlToXml/src/main/resources/data/inbox5?noop=true")
+        from("file:TransformXmlToXml/src/main/resources/data/inbox/inbox5?noop=true")
+        //from("file:C:/Kati/Marlo/GitRepo/FileReads/Project01")
+                .id("route5")
                 .unmarshal(jaxbDataFormat1)
                 .bean(processor5Object, "processor5Method")
                 .marshal(jaxbDataFormat2)

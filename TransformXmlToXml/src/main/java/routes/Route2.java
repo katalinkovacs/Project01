@@ -11,22 +11,13 @@ public class Route2 extends RouteBuilder{
 
     public void configure() throws Exception {
 
-
-        /* DataFormat jaxb = new JaxbDataFormat("com.acme.model");
-         *  from("activemq:My.Queue").
-         *       unmarshal(jaxb).
-         *       to("mqseries:Another.Queue");
-         */
-
-
         JaxbDataFormat jaxbDataFormat2 = new JaxbDataFormat("employeeversion2");
 
         JaxbDataFormat jaxbDataFormat1 = new JaxbDataFormat("employeeversion1");
 
-
-        // FROM FILE TO FILE
-
-        from("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/From2")
+        //from("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/From2")
+        from("file:TransformXmlToXml/src/main/resources/data/inbox/inbox2?noop=true")
+                .id("route2")
                 //unmarshalling is the process to read in xml and convert to java object using jaxb generated template
                 // classes
                 .unmarshal(jaxbDataFormat2)
@@ -35,7 +26,8 @@ public class Route2 extends RouteBuilder{
                 //marshalling is the process to convert java to xml -- the processor from previous step returns
                 // a person2 which will be used to create the output xml
                 .marshal(jaxbDataFormat1)
-                .to("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/To2");
+                //.to("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/To2");
+                .to("file:TransformXmlToXml/src/main/resources/data/outbox");
 
     }
 

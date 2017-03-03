@@ -11,7 +11,7 @@ public class Processor2 {
     public void processor2Method (Exchange ex) throws Exception {
 
 
-        ex.getIn().setHeader("FileComponent.HEADER_FILE_NAME", "Employee2toEmployee1.xml");
+        ex.getIn().setHeader("CamelFileName", "Employee2toEmployee1.xml");
 
         Employeeversion2 e2 = (Employeeversion2) ex.getIn().getBody();
 

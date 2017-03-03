@@ -17,3 +17,15 @@ EmployeeVersion2/src/main/java/employeeversion2/ObjectFactory.java
 Employees1_Phones/src/main/java/META-INF/sun-jaxb.episode
 Employees1_Phones/src/main/java/employees1withphones/Employeeversion1.java
 Employees1_Phones/src/main/java/employees1withphones/ObjectFactory.java
+Employees1/src/main/java/META-INF/sun-jaxb.episode
+Employees1/src/main/java/employees1/Employeeversion1.java
+Employees1/src/main/java/employees1/ObjectFactory.java
+Employees1_PhonesAddress/src/main/java/META-INF/sun-jaxb.episode
+Employees1_PhonesAddress/src/main/java/employees1phonesaddress/Employeeversion1.java
+Employees1_PhonesAddress/src/main/java/employees1phonesaddress/ObjectFactory.java
+Employees2/src/main/java/META-INF/sun-jaxb.episode
+Employees2/src/main/java/employees2/Employeeversion2.java
+Employees2/src/main/java/employees2/ObjectFactory.java
+Employees2_PhonesAddress/src/main/java/META-INF/sun-jaxb.episode
+Employees2_PhonesAddress/src/main/java/employees2phonesaddress/Employeeversion2.java
+Employees2_PhonesAddress/src/main/java/employees2phonesaddress/ObjectFactory.java

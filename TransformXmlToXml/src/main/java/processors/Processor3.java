@@ -1,7 +1,7 @@
 package processors;
 
-import employees1phonesaddress.Employeeversion1;
-import employees2phonesaddress.Employeeversion2;
+import employees1.Employeeversion1;
+import employees2.Employeeversion2;
 import org.apache.camel.Exchange;
 
 
@@ -9,7 +9,7 @@ public class Processor3 {
 
     public void processor3Method (Exchange ex) throws Exception {
 
-        ex.getIn().setHeader("CamelFileName", "Employee1toEmployee2.xml");
+        ex.getIn().setHeader("CamelFileName", "Employees1toEmployees2.xml");
 
         Employeeversion1 e1 = (Employeeversion1) ex.getIn().getBody();
 
