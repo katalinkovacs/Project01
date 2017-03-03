@@ -12,23 +12,21 @@ import org.custommonkey.xmlunit.Diff;
 import org.custommonkey.xmlunit.Difference;
 import org.junit.Test;
 import org.springframework.util.ResourceUtils;
-import routes.Route2;
+import routes.Route1;
 
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 
-
-
 //CamelTestSupport will give extra camel specific functionality like createCamelContext
-public class Route2Test extends CamelTestSupport {
+public class Route1Test extends CamelTestSupport {
 
 /*
     protected CamelContext createCamelContext() throws Exception {
         //invoking super class to create the context and
-        // we add route2 to it just like StartApp main
+        // we add route1 to it just like StartApp main
         CamelContext context = super.createCamelContext();
-        context.addRoutes(new Route2());
+        context.addRoutes(new Route1());
 
         return context;
     }
@@ -37,7 +35,7 @@ public class Route2Test extends CamelTestSupport {
 
     @Override
     protected RouteBuilder createRouteBuilder(){
-        return new Route2();
+        return new Route1();
     }
 
 
@@ -46,10 +44,10 @@ public class Route2Test extends CamelTestSupport {
     public void setUp() throws Exception{
         super.setUp();
         // need the definition of the route to add test magic
-        RouteDefinition route2Definition = context.getRouteDefinition("route2");
+        RouteDefinition route1Definition = context.getRouteDefinition("route1");
 
 
-        route2Definition.adviceWith(context, new AdviceWithRouteBuilder() {
+        route1Definition.adviceWith(context, new AdviceWithRouteBuilder() {
             @Override
             public void configure() throws Exception {
                 // test magic: replacing "from" with direct:in so we can directly send
@@ -65,10 +63,10 @@ public class Route2Test extends CamelTestSupport {
     }
 
     @Test
-    public void route2_whenValidInput_thenValidOutput() throws Exception{
+    public void route1_whenValidInput_thenValidOutput() throws Exception{
         // reading in xml request and expected with some
-        String request = FileUtils.readFileToString(ResourceUtils.getFile("classpath:input/request2.xml"));
-        String expected = FileUtils.readFileToString(ResourceUtils.getFile("classpath:expected/expectedResultRoute2.xml"));
+        String request = FileUtils.readFileToString(ResourceUtils.getFile("classpath:input/request1.xml"));
+        String expected = FileUtils.readFileToString(ResourceUtils.getFile("classpath:expected/expectedResultRoute1.xml"));
 
         // using template which is given by CamelTestSupport
         // template is like a client which sends a request to the given endpoint

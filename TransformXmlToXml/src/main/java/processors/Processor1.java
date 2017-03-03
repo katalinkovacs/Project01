@@ -12,7 +12,7 @@ public class Processor1 {
     public void processor1Method (Exchange ex) throws Exception {
 
         //change file name to have a different output file name
-        ex.getIn().setHeader("FileComponent.HEADER_FILE_NAME", "Employee1toEmployee2.xml");
+        ex.getIn().setHeader("CamelFileName", "Employee1toEmployee2.xml");
         // camel file component
         //gets the unmarshaled java object from message body
         // this is standard camel how to get the body

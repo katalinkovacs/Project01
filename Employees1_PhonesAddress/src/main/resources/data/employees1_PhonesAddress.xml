@@ -13,7 +13,6 @@
                 <suburb>Altona Meadows</suburb>
             </address>
         </employee>
-
         <employee>
             <lastname>Kallay</lastname>
             <firstname>Krisztina</firstname>
@@ -26,6 +25,5 @@
                 <suburb>Nyiregyhaza</suburb>
             </address>
         </employee>
-
     </employees>
 </employeeversion1>

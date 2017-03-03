@@ -9,7 +9,7 @@ public class Processor4 {
 
     public void processor4Method (Exchange ex) throws Exception {
 
-        ex.getIn().setHeader("CamelFileName", "Employeephone1toEmployeephone2.xml");
+        ex.getIn().setHeader("CamelFileName", "Employees1PhonesToEmployees2Phones.xml");
 
         Employeeversion1 e1 = (Employeeversion1) ex.getIn().getBody();
 

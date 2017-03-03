@@ -28,7 +28,9 @@ public class Route1 extends RouteBuilder{
 
         // FROM FILE TO FILE
 
-        from("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/From")
+       // from("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/From")
+        from("file:TransformXmlToXml/src/main/resources/data/inbox/inbox1?noop=true")
+                .id("route1")
                 //unmarshalling is the process to read in xml and convert to java object using jaxb generated template
                 // classes
                 .unmarshal(jaxbDataFormat1)
@@ -37,7 +39,8 @@ public class Route1 extends RouteBuilder{
                 //marshalling is the process to convert java to xml -- the processor from previous step returns
                 // a person2 which will be used to create the output xml
                 .marshal(jaxbDataFormat2)
-                .to("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/To");
+                .to("file:TransformXmlToXml/src/main/resources/data/outbox");
+                //.to("file:C:/Kati/Marlo/GitRepo/FileReads/Project01/To");
 
 
 

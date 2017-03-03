@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <employeeversion1>
     <employees>
-
         <employee>
             <lastname>Kovacs</lastname>
             <firstname>Katalin</firstname>
@@ -10,7 +9,6 @@
                 <home>12345</home>
             </phones>
         </employee>
-
         <employee>
             <lastname>Kallay</lastname>
             <firstname>Krisztina</firstname>
@@ -19,6 +17,5 @@
                 <home>678910</home>
             </phones>
         </employee>
-
     </employees>
 </employeeversion1>

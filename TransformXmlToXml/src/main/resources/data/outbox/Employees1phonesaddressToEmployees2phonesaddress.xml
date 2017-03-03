@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employeeversion2>
+    <staff>
+        <staffmember>
+            <givenname>Katalin</givenname>
+            <familyname>Kovacs</familyname>
+            <phonenumbers>
+                <cellphone>4761234</cellphone>
+                <landline>12345</landline>
+            </phonenumbers>
+            <location>
+                <streetname>Nicholson</streetname>
+                <city>Altona Meadows</city>
+            </location>
+        </staffmember>
+        <staffmember>
+            <givenname>Krisztina</givenname>
+            <familyname>Kallay</familyname>
+            <phonenumbers>
+                <cellphone>4765678</cellphone>
+                <landline>678910</landline>
+            </phonenumbers>
+            <location>
+                <streetname>Kalevala</streetname>
+                <city>Nyiregyhaza</city>
+            </location>
+        </staffmember>
+    </staff>
+</employeeversion2>

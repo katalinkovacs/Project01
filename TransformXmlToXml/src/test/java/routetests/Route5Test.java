@@ -55,8 +55,8 @@ public class Route5Test extends CamelTestSupport {
     @Test
     public void route5_whenValidInput_thenValidOutput() throws Exception{
         // reading in xml request and expected with some
-        String request = FileUtils.readFileToString(ResourceUtils.getFile("classpath:input/request.xml"));
-        String expected = FileUtils.readFileToString(ResourceUtils.getFile("classpath:expected/successResult.xml"));
+        String request = FileUtils.readFileToString(ResourceUtils.getFile("classpath:input/request5.xml"));
+        String expected = FileUtils.readFileToString(ResourceUtils.getFile("classpath:expected/expectedResultRoute5.xml"));
 
         // using template which is given by CamelTestSupport
         // template is like a client which sends a request to the given endpoint
