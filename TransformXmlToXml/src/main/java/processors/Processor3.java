@@ -1,7 +1,7 @@
 package processors;
 
-import employees1phonesaddress.Employeeversion1;
-import employees2phonesaddress.Employeeversion2;
+import employees1.Employeeversion1;
+import employees2.Employeeversion2;
 import org.apache.camel.Exchange;
 
 
